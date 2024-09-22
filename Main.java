@@ -36,12 +36,17 @@ public class Main {
             }
 
         }
-        int[] output = list.toArray(new Integer[0]);
-        return output;
+        return convertToArray(list);
 
     }
 
-   
+    public static int[] convertToArray(List<Integer> list) {
+        int[] nums = new int[list.size()];
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = list.get(i);
+        }
+        return nums;
+    }
 
     public static int[] removeDuplicates(int[] arr) {
 
@@ -52,9 +57,7 @@ public class Main {
                 list.add(arr[i]);
             }
         }
-        int[] output = list.toArray(new Integer[0]);
-        return output;
-        
+        return convertToArray(list);
     }
 
 }
