@@ -54,7 +54,7 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
 
             if (list.contains(arr[i]) == false) {
-                list.add(arr[i]);
+                list.add(arr[i]); // excluding the duplicates and adding only to the list
             }
         }
         return convertToArray(list);
