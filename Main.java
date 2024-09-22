@@ -30,23 +30,18 @@ public class Main {
 
     public static int[] removeOccurences(int[] arr, int key) {
         List<Integer> list = new ArrayList<>();
-        for (int element : arr) {
+        for (int element : arr) { //for each loop directly accessing elemeents instead of array index
             if (element != key) {
-                list.add(element);
+                list.add(element); //adding only elements to the list which is not key
             }
 
         }
-        return convertToArray(list);
+        int[] output = list.toArray(new Integer[0]);
+        return output;
 
     }
 
-    public static int[] convertToArray(List<Integer> list) {
-        int[] nums = new int[list.size()];
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = list.get(i);
-        }
-        return nums;
-    }
+   
 
     public static int[] removeDuplicates(int[] arr) {
 
@@ -57,7 +52,9 @@ public class Main {
                 list.add(arr[i]);
             }
         }
-        return convertToArray(list);
+        int[] output = list.toArray(new Integer[0]);
+        return output;
+        
     }
 
 }
